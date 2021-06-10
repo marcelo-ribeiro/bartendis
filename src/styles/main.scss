@@ -29,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 1rem 0.5rem 3rem;
+  padding: 1rem 0.75rem 3rem;
   max-width: 640px;
   min-height: 100%;
   background-color: var(--color-bg);
@@ -106,7 +106,7 @@ svg {
 }
 
 .app__logo {
-  width: 40%;
+  width: 35%;
 }
 
 .app__title {
@@ -122,6 +122,10 @@ svg {
   overflow: hidden;
   border: 1px solid #0002;
   border-radius: 4px;
+
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
 }
 .item,
 .item-divider {
@@ -136,11 +140,11 @@ svg {
     border-radius: 0 0 4px 4px;
   }
   p, .note {
-    font-size: 12px;
-    color: #0008;
+    color: #0009;
   }
   p {
     margin-top: 0.125rem;
+    font-size: 12px;
   }
   .note {
     margin-left: 1rem;
