@@ -64,7 +64,7 @@ module.exports = {
     port: 8000, //process.env.PORT, // Defaults to 8080
     open: true,
     hot: true,
-    liveReload: false,
+    liveReload: true,
     // lazy: true,
     // filename: 'src.bundle.js',
   },

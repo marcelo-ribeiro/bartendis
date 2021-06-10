@@ -1,9 +1,9 @@
 {
-  "name": "Abrir contato no Whatsapp",
-  "short_name": "Abrir contato no Whatsapp",
+  "name": "bartendis",
+  "short_name": "bartendis",
   "description": "",
   "start_url": "./?v=1.0.6",
-  "scope": "/abrir-contato-whatsapp/",
+  "scope": ".",
   "display": "standalone",
   "background_color": "#ece5dd",
   "theme_color": "#075e54",
