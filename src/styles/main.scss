@@ -122,7 +122,6 @@ svg {
   overflow: hidden;
   border: 1px solid #0002;
   border-radius: 4px;
-
   &:not(:first-child) {
     margin-top: 2rem;
   }
@@ -135,7 +134,7 @@ svg {
 }
 .item {
   border-bottom: 1px solid #0002;
-  font-size: 16px;
+  font-size: 15px;
   &:last-child {
     border-radius: 0 0 4px 4px;
   }
@@ -153,7 +152,6 @@ svg {
 .item-divider {
   background: #0001;
   color: #0008;
-  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
