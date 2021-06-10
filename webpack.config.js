@@ -8,7 +8,7 @@ module.exports = {
     "./src/styles/main.scss", "./src/scripts/index.js"
   ],
   output: {
-    filename: "src.bundle.js",
+    filename: "app.bundle.js",
     path: path.resolve(__dirname, "docs"),
   },
   module: {
