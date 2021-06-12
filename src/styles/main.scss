@@ -1,11 +1,13 @@
 // Variables
 :root {
-  --color-primary: #25d366;
-  --color-bg: #ece5dd;
+  --color-primary-hue: 30;
+  --color-primary-hsl: var(--color-primary-hue), 50%, 50%;
+  --color-primary: hsl(var(--color-primary-hsl));
+  --color-bg: hsl(var(--color-primary-hue), 10%, 20%);
   --color-teal-green: #128c7e;
   --color-teal-green-dark: #075e54;
   --color-button: var(--color-teal-green);
-  --text-color: #000c;
+  --text-color: #fffc;
   --font-family: "Inter", "Roboto", sans-serif;
 }
 
@@ -29,13 +31,13 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 1rem 0.75rem 3rem;
-  max-width: 640px;
+  padding: 1rem 1rem 3rem;
+  max-width: 540px;
   min-height: 100%;
   background-color: var(--color-bg);
   color: var(--text-color);
   overflow: hidden;
-  cursor: default;
+  //cursor: default;
   user-select: none;
 }
 
@@ -50,7 +52,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 main {
@@ -101,16 +103,12 @@ svg {
   fill: currentColor;
 }
 
-.app__header {
-  margin-bottom: 2rem;
-}
-
 .app__logo {
   width: 35%;
 }
 
 .app__title {
-  margin: 0.5rem 0 0;
+  margin: 1rem 0 0;
   font-size: 1.125rem;
   text-align: center;
   font-weight: 700;
@@ -119,9 +117,6 @@ svg {
 }
 
 .list {
-  overflow: hidden;
-  border: 1px solid #0002;
-  border-radius: 4px;
   &:not(:first-child) {
     margin-top: 1.5rem;
   }
@@ -130,16 +125,16 @@ svg {
 .item-divider {
   display: flex;
   justify-content: space-between;
-  padding: 0.375rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
 }
 .item {
-  border-bottom: 1px solid #0002;
   font-size: 14px;
-  &:last-child {
-    border-radius: 0 0 4px 4px;
+  &:not(:last-child) {
+    border-bottom: 1px dashed hsla(var(--color-primary-hsl), 0.15);
   }
   p, .note {
-    color: #0009;
+    color: var(--text-color);
+    opacity: 0.7;
   }
   p {
     margin-top: 0.125rem;
@@ -150,12 +145,15 @@ svg {
   }
 }
 .item-divider {
-  background: #0001;
-  color: #0008;
+  margin-bottom: 0.5rem;
+  transform: skewX(-15deg);
+  background: linear-gradient(90deg, var(--color-primary), transparent);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  &:first-child {
-    border-radius: 4px 4px 0 0;
+  letter-spacing: 0.25em;
+  border-radius: 3px;
+  span {
+    color: var(--text-color);
+    transform: skewX(15deg);
   }
 }
