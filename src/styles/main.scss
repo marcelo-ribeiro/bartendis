@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 1rem 1rem 3rem;
+  padding: 1rem 0 3rem;
   max-width: 540px;
   min-height: 100%;
   background-color: var(--color-bg);
@@ -125,10 +125,14 @@ svg {
 .item-divider {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+  padding: 0.5rem;
 }
 .item {
   font-size: 14px;
+  margin-right: 1.5rem;
+  margin-left: 1.75rem;
+  padding-right: 0;
+  padding-left: 0;
   &:not(:last-child) {
     border-bottom: 1px dashed hsla(var(--color-primary-hsl), 0.15);
   }
@@ -146,6 +150,8 @@ svg {
 }
 .item-divider {
   margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  padding-left: 0.75rem;
   transform: skewX(-15deg);
   background: linear-gradient(90deg, var(--color-primary), transparent);
   font-weight: 700;
